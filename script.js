@@ -1,28 +1,58 @@
-// Instruction
+ // 1. Student
+const StudentList = ["Ali", "Diyan", "Ahmed", "Yousuf", "Hassan"];
+console.log();
 
-// 1)
-// const studentName = ["Ali", "Hammad", "Omar", "Saad", "Diyan"]
+// 2) No Do
 
-// console.log(studentName);
+// Unshift Task
+studentList.unshift("Bilal");
+// Push
+// Add one name at the end
+studentList.push("Zoya");
 
-// 2) Deep Copy
+// Add one name at a index
+let Index = Math.floor(Math.random() * studentList.length);
+let newStudent = "Sana";
 
-// let originalArray = [
-//   { name: "Ali", age: 15 },
-//   { name: "Sara", age: 16 }
-// ];
+//  shifting elements
+for (let i = studentList.length; i > randomIndex; i--) {
+  studentList[i] = studentList[i - 1];
+}
+studentList[randomIndex] = newStudent;
 
-// // Deep copy
-// let copyArray = JSON.parse(JSON.stringify(originalArray));
+console.log("After adding students:", studentList);
 
-// Now copyArray is independent of originalArray
+// 4. Update a students name
+studentList[2] = "Nashit"; //
 
+console.log(studentList);
 
-// 3) Add student
-const studentName = ["Ali", "Hammad", "Omar", "Saad", "Diyan"]
-studentName.unshift("Starting Value")
-console.log(studentName);
+// 5. Remove students
 
+// Remove first student
+studentList.shift();
 
+// Remove last student
+studentList.pop();
 
+console.log(studentList);
 
+// 6. Search for a student
+function searchStudent("Ali") {
+  return studentList.includes("Ali")
+}
+
+console.log(searchStudent("Ali"));   // 
+
+// 7. Find index of a student
+let studentIndex = studentList.indexOf("Ali");
+console.log(studentIndex);
+
+// 8. Show total number of students
+console.log("Total students:", studentList.length);
+
+// 9. Print all student names
+console.log("All student names:");
+for (let student of studentList) {
+  console.log(student);
+}
